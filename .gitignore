@@ -2,3 +2,16 @@ data/
 results/
 .env
 .dockerignore
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Model Checkpoints & Large Data
+checkpoints/
+*.ckpt
+*.pth
+
+# Environment & Logs
+lightning_logs/
