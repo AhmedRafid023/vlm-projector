@@ -1,0 +1,12 @@
+experiment:
+  situation: "zero_shot"
+  seed: 42
+  # Where to save the final results
+  output_csv: "results/iu/zero_shot_results.csv"
+
+model:
+  id: "google/medgemma-4b-it"
+
+data:
+  csv_path: "./data/iu-chest/test_split.csv"
+  batch_size: 8

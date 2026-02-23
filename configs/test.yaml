@@ -1,0 +1,21 @@
+test:
+  # REPLACE THIS with your actual trained checkpoint path after training
+  checkpoint_path: "checkpoints/iu-llava-vision_proj-epoch=03.ckpt" 
+  
+  output_csv: "results/iu_llava_test_results_vis_proj.csv"
+  threshold: 0.5 
+
+model:
+  # id: "google/medgemma-4b-it"
+  id: "chaoyinshe/llava-med-v1.5-mistral-7b-hf"
+  # num_classes: 5
+  num_classes: 9
+
+experiment:
+  situation: "vision_proj"
+  # situation: "vision_only"
+
+data:
+  csv_path: "./data/iu-chest/test_split.csv"
+  batch_size: 16
+  num_workers: 4

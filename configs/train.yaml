@@ -1,0 +1,27 @@
+experiment:
+  # Options: "vision_only", "vision_proj", "zero_shot"
+  situation: "vision_proj"
+  seed: 42
+  # Set to true to run 1 batch for debugging
+  debug: false 
+
+model:
+  id: "chaoyinshe/llava-med-v1.5-mistral-7b-hf"
+  # id : "google/medgemma-4b-it"
+  # num_classes: 5
+  num_classes: 9
+
+data:
+  # Updated to point to your separate split files
+  train_csv: "data/iu-chest/train_split.csv"
+  # test_csv: "data/test_split.csv"
+  batch_size: 32
+  num_workers: 4
+
+trainer:
+  max_epochs: 4
+  precision: "bf16-mixed"
+  learning_rate: 1.0e-4
+  accelerator: "gpu"
+  devices: 1
+

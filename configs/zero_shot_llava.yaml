@@ -1,0 +1,12 @@
+experiment:
+  situation: "zero_shot"
+  seed: 42
+  output_csv: "results/iu/zero_shot_llava_results.csv"
+
+model:
+  # Using an HF-standardized version of LLaVA-Med
+  id: "chaoyinshe/llava-med-v1.5-mistral-7b-hf" 
+
+data:
+  csv_path: "./data/iu-chest/test_split.csv"
+  batch_size: 1 # Zero-shot is typically done with BS=1 for accuracy in generation
